@@ -1,9 +1,7 @@
 const express = require('express');
 const router = express.Router();
-
 const chalk = require('chalk')
 const moment = require('moment');
-const moment_timezone = require('moment-timezone');
 
 router.get('/time',function(req,res){
 	let day = req.query.day;
