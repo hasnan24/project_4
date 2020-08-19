@@ -1,8 +1,13 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
 
-var time = require('./time.js')
-var time_conv = require('./time-converter.js')
+
+const time = require('./time.js')
+const time_conv = require('./time-converter.js')
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 
 app.use(time)
 app.use(time_conv)
